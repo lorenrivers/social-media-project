@@ -8,9 +8,14 @@ export default async function CreateProfile() {
 
   async function handleSaveProfile() {
     "use server";
+
     const location = formData.get("location");
     const bio = formData.get("bio");
+
     //add sql query to insert data in to database
+    const postResult =
+      await sql`INSERT INTO user_info (user_id, first_name, last_name, location, bio) VALUES (${user.id}, ${user.firstName}${user.lastName}${location}${bio})`;
+
     revalidatePath("/my-profile");
     redirect("/my-profile");
   }
@@ -29,7 +34,7 @@ export default async function CreateProfile() {
         <label htmlFor="bio">Write a short bio about yourself!</label>
         <textarea
           id="bio"
-          namme="bio"
+          name="bio"
           placeholder="What do you want other people to know about you? Hobbies? Interests? Favourite movies or music? Write it here! "
         ></textarea>
         <button type="submit">Save Profile</button>
