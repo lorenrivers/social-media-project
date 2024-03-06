@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 export default async function CreateProfile() {
   const user = await currentUser();
 
-  async function handleSaveProfile() {
+  async function handleSaveProfile(formData) {
     "use server";
 
     const location = formData.get("location");
@@ -14,7 +14,7 @@ export default async function CreateProfile() {
 
     //add sql query to insert data in to database
     const postResult =
-      await sql`INSERT INTO user_info (user_id, first_name, last_name, location, bio) VALUES (${user.id}, ${user.firstName}${user.lastName}${location}${bio})`;
+      await sql`INSERT INTO user_info (user_id, first_name, last_name, location, bio) VALUES (${user.id}, ${user.firstName}, ${user.lastName}, ${location}, ${bio})`;
 
     revalidatePath("/my-profile");
     redirect("/my-profile");
