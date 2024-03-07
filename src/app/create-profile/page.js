@@ -16,7 +16,7 @@ export default async function CreateProfile() {
     const postResult =
       await sql`INSERT INTO user_info (user_id, first_name, last_name, location, bio) VALUES (${user.id}, ${user.firstName}, ${user.lastName}, ${location}, ${bio})`;
 
-    revalidatePath("/my-profile");
+    revalidatePath("/find-a-user");
     redirect("/my-profile");
   }
 

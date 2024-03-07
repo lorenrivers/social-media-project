@@ -1,4 +1,5 @@
 import { sql } from "@vercel/postgres";
+import { notFound } from "next/navigation";
 
 export default async function UserIdProfilePage({ params }) {
   //display the specifc profile information
@@ -12,6 +13,10 @@ export default async function UserIdProfilePage({ params }) {
   LEFT JOIN posts
   ON user_info.user_id = posts.user_id
   WHERE id = ${params.id}`;
+
+  if (!profile) {
+    notFound();
+  }
 
   return (
     <div>

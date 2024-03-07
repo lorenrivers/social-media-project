@@ -2,8 +2,6 @@ import { sql } from "@vercel/postgres";
 import Link from "next/link";
 
 export default async function FindAUser({ searchParams }) {
-  console.log(searchParams);
-
   const users = await sql`SELECT id, first_name, last_name FROM user_info`;
 
   return (
