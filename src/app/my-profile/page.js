@@ -12,17 +12,21 @@ export default async function MyProfile() {
 
   return (
     <div>
-      <h2>{user.firstName}&apos;s Profile</h2>
+      <h2 className="text-indigo12 m-2 font-bold">
+        {user.firstName}&apos;s Profile
+      </h2>
       {usersProfileInfo.rows.map((userInfo) => (
-        <div key={userInfo.id}>
+        <div key={userInfo.id} className="m-2">
           <p>Lives in {userInfo.location}</p>
           <h4>Bio:</h4>
           <p>{userInfo.bio}</p>
         </div>
       ))}
-      <h4>{user.firstName}&apos;s Posts</h4>
+      <h4 className="text-indigo12 m-2 font-semibold">
+        {user.firstName}&apos;s Posts
+      </h4>
       {usersPosts.rows.map((userPost) => (
-        <div key={userPost.id}>
+        <div key={userPost.id} className="m-2">
           <p>{userPost.post_content}</p>
         </div>
       ))}

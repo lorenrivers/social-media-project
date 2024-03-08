@@ -20,13 +20,17 @@ export default async function UserIdProfilePage({ params }) {
 
   return (
     <div>
-      <h2>{profile.first_name}&apos;s Profile</h2>
-      <p>Lives in {profile.location}</p>
-      <h4>Bio:</h4>
-      <p>{profile.bio}</p>
-      <h2>{profile.first_name}&apos;s Posts</h2>
+      <h2 className="text-indigo12 m-2 font-bold">
+        {profile.first_name}&apos;s Profile
+      </h2>
+      <p className="m-2">Lives in {profile.location}</p>
+      <h4 className="m-2">Bio:</h4>
+      <p className="m-2">{profile.bio}</p>
+      <h2 className="text-indigo12 m-2 font-semibold">
+        {profile.first_name}&apos;s Posts
+      </h2>
       {userPosts.rows.map((userPost) => (
-        <div key={userPost.id}>
+        <div key={userPost.id} className="m-2">
           <p>{userPost.post_content}</p>
         </div>
       ))}
