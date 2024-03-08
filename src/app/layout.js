@@ -1,12 +1,12 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
-import NavBar from "./components/NavBar";
+import Header from "@/app/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Social Media Project",
+  title: "The Social Network",
   description: "Sign up today to chat with friends!",
 };
 
@@ -15,8 +15,7 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en">
         <body className={inter.className}>
-          <h1>The Social Network</h1>
-          <NavBar />
+          <Header />
           {children}
         </body>
       </html>
