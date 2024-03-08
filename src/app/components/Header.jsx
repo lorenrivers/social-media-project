@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
-import UserAndSignInButtons from "./UserAndSignInButtons";
 import * as Separator from "@radix-ui/react-separator";
 import Link from "next/link";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
+import { SignInButton } from "@clerk/nextjs";
 
 const SeparatorDemo = () => (
   <div className="w-full max-w-[300px] mx-[15px]">
@@ -43,7 +45,12 @@ const SeparatorDemo = () => (
         decorative
         orientation="vertical"
       />
-      <UserAndSignInButtons />
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
+      <SignedOut>
+        <SignInButton className="text-indigo11 text-[15px] leading-5" />
+      </SignedOut>
     </div>
   </div>
 );
