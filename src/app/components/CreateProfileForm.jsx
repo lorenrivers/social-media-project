@@ -22,7 +22,7 @@ const FormDemo = () => (
       </div>
       <Form.Control asChild>
         <input
-          className="box-border w-full bg-slate2 shadow-blackA6 inline-flex h-[35px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none text-white shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6 ml-2"
+          className="box-border w-full bg-slate2 shadow-blackA6 inline-flex h-[35px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none text-indigo12 shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6 ml-2"
           id="location"
           name="location"
           type="text"
@@ -49,7 +49,7 @@ const FormDemo = () => (
       </div>
       <Form.Control asChild>
         <textarea
-          className="box-border w-full bg-slate2 shadow-blackA6 inline-flex appearance-none items-center justify-center rounded-[4px] p-[10px] text-[15px] leading-none text-white shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6 resize-none ml-2"
+          className="box-border w-full bg-slate2 shadow-blackA6 inline-flex appearance-none items-center justify-center rounded-[4px] p-[10px] text-[15px] leading-none text-indigo12 shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6 resize-none ml-2"
           id="bio"
           name="bio"
           placeholder="What do you want other people to know about you? Hobbies? Interests? Favourite movies or music? Write it here!"
