@@ -7,7 +7,7 @@ import { UserButton } from "@clerk/nextjs";
 import { SignInButton } from "@clerk/nextjs";
 
 const SeparatorDemo = () => (
-  <div className="w-full max-w-[600px] mx-[15px] mb-10">
+  <div className="w-full max-w-[650px] mx-[15px] mb-10">
     <div className="text-indigo12 text-[30px] leading-5 font-medium pl-5 pt-5 pr-5 pb-2 ">
       <h1>The Social Network</h1>
     </div>

@@ -6,7 +6,9 @@ export default async function CreateProfile() {
 
   return (
     <div>
-      <h2>Hi {user.firstName}, let&apos;s finish creating your profile!</h2>
+      <h2 className="text-indigo12 m-2 font-bold">
+        Hi {user.firstName}, let&apos;s finish creating your profile!
+      </h2>
       <CreateProfileForm />
     </div>
   );

@@ -5,3 +5,9 @@
 * {
   box-sizing: border-box;
 }
+
+.welcome-text {
+  font-size: 3rem;
+  margin-top: 80px;
+  margin-left: 20px;
+}
