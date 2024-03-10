@@ -4,12 +4,7 @@ import * as Form from "@radix-ui/react-form";
 import { handleSavePost } from "./serverFunctions";
 
 const FormDemo = () => (
-  <Form.Root
-    className="w-[260px]"
-    action={() => {
-      handleSavePost;
-    }}
-  >
+  <Form.Root className="w-[260px]" action={handleSavePost}>
     <Form.Field className="grid mb-[10px]">
       <div className="flex items-baseline justify-between">
         <Form.Label
