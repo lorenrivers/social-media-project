@@ -1,5 +1,6 @@
 import { sql } from "@vercel/postgres";
 import { notFound } from "next/navigation";
+import LikeButton from "@/app/components/LikeButton";
 
 export default async function UserIdProfilePage({ params }) {
   //display the specifc profile information

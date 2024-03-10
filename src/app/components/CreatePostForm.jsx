@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import * as Form from "@radix-ui/react-form";
-import { handleSavePost } from "./serverFunctions";
+import { handleSavePost, insertInitialLikes } from "./serverFunctions";
 
 const FormDemo = () => (
   <Form.Root className="w-[260px]" action={handleSavePost}>
